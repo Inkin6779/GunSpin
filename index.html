@@ -8,6 +8,11 @@
         <script src="UnityLoader.js"></script>
         <script src="UnityProgress.js"></script>
         <script>
+        window.onbeforeunload = function() {
+            return "Are you sure you want to reload?";
+        };
+    </script>
+        <script>
             var gameInstance = UnityLoader.instantiate("gameContainer", "build.json", {
                 onProgress: UnityProgress,
                 Module: {
